@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6l</title>
+  </head>
+  <body>
+    <p>
+      Cart Quantity
+    </p>
+    <button onclick="console.log(`Cart quantity: ${showquantity}`);">
+      Show Quantity
+    </button>
+    <button onclick="showquantity < 10 ? console.log(`Cart quantity: ${showquantity = showquantity + 1}`) : console.log(`The cart is full`)">
+      Add to Cart 
+    </button>
+    <button onclick="showquantity < 9 ? console.log(`Cart quantity: ${showquantity = showquantity + 2}`) : console.log(`The cart is full`)">
+      +2
+    </button>
+    <button onclick="showquantity < 8 ? console.log(`Cart quantity: ${showquantity = showquantity + 3}`) : console.log(`The cart is full`)">
+      +3
+    </button>
+    <button onclick="showquantity < 7 ? console.log(`Cart quantity: ${showquantity = showquantity + 4}`) : console.log(`The cart is full`)">
+      +4
+    </button>
+    <button onclick="showquantity < 6 ? console.log(`Cart quantity: ${showquantity = showquantity + 5}`) : console.log(`The cart is full`)">
+      +5
+    </button>
+    <button onclick="console.log('Cart was reset.');
+    console.log(`Cart quantity: ${showquantity = 0}`);">
+      Reset Cart
+    </button>
+    <button onclick="console.log(`Cart quantity: ${--showquantity}`);">
+      Remove from cart
+    </button>
+    <button onclick="showquantity > 1 ? console.log(`Cart quantity: ${showquantity -= 2}`) : console.log(`Not enough items in the cart`)">
+      -2
+    </button>
+    <button onclick="showquantity > 2 ? console.log(`Cart quantity: ${showquantity -= 3}`) : console.log(`Not enough items in the cart`)">
+      -3
+    </button>
+    <script>
+      let showquantity = 0;
+    </script>
+  </body>
+</html>
