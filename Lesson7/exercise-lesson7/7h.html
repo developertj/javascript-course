@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7h</title>
+  </head>
+  <body>
+    <p>
+      Cart Quantity
+    </p>
+    <button onclick="console.log(`Cart quantity: ${showquantity}`);">
+      Show Quantity
+    </button>
+    <button onclick="updateCartQuantitiy(10, 1)">
+      Add to Cart 
+    </button>
+    <button onclick="updateCartQuantitiy(9, 2)">
+      +2
+    </button>
+    <button onclick="updateCartQuantitiy(8, 3)">
+      +3
+    </button>
+    <button onclick="updateCartQuantitiy(7, 4)">
+      +4
+    </button>
+    <button onclick="updateCartQuantitiy(6, 5)">
+      +5
+    </button>
+    <button onclick="console.log('Cart was reset.');
+    console.log(`Cart quantity: ${showquantity = 0}`);">
+      Reset Cart
+    </button>
+    <button onclick="updateCartQuantitiy2(0, 1);">
+      Remove from cart
+    </button>
+    <button onclick="updateCartQuantitiy2(1, 2);">
+      -2
+    </button>
+    <button onclick="updateCartQuantitiy2(2, 3);">
+      -3
+    </button>
+    <script>
+      let showquantity = 0;
+      function updateCartQuantitiy(max, add){
+        showquantity < max ? console.log(`Cart quantity: ${showquantity = showquantity + add}`) : console.log(`The cart is full`)
+      }
+      function updateCartQuantitiy2(min, minus){
+        showquantity > min ? console.log(`Cart quantity: ${showquantity -= minus}`) : console.log(`Not enough items in the cart`)
+      }
+    </script>
+  </body>
+</html>
