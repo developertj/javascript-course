@@ -9,11 +9,22 @@
   <button>
     hello
   </button>
+  <button class="js-button">Second button</button>
   <script>
-    document.title = 'Changed';
+    /*document.title = 'Changed';
     console.log(document.body.innerHTML);
     document.body.innerHTML = 'hi world!';
     console.log(document.title);
+    */
+    
+
+    //querySelector
+    console.log(document.querySelector('button'));
+    document.querySelector('button')
+      .innerHTML =  'Changed';
+    //console.log(document.querySelector('.js-button'));
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
   </script>
 </body>
 </html>
