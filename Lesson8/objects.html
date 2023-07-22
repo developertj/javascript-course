@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    // const product = {
+    //   name: 'socks',
+    //   price: 50
+    // };
+    // console.log(product);
+    // console.log(product.name);
+    // console.log(product.price);
+    // product.price = 70;
+    // console.log(product);
+    // product.newItem = 'kurti';
+    // console.log(product);
+    // delete product.newItem;
+    // console.log(product)
+
+    const product2 ={
+      name: 'shirt',
+      'delivery-time': '1 day',
+      rating: {star: '4.5 star',
+        count: 87
+    },
+      fun: function(){
+        console.log('This is a nested function which is called as method');
+      }
+    };
+    console.log(product2['delivery-time']);
+    console.log(product2.rating);
+    console.log(product2.rating.count);
+
+    //calling method which is similar to console.log and math.random
+    product2.fun();
+    //console.log(5);
+
+    //JSON javaScript object notation
+    console.log(JSON.stringify(product2));
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
+
+    //localStorage
+    let number = 1 + 2;
+    localStorage.setItem('number', number);
+    console.log(localStorage.getItem('number'));
+  </script>
+</body>
+</html>

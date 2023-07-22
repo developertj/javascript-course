@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8j</title>
+</head>
+<body>
+  <button onclick="{
+    playGame('Heads');
+  }
+  ">
+    heads
+  </button>
+  <button onclick="{
+    playGame('Tails');
+  }
+  ">
+    tails
+  </button>
+  <script>
+    let result = '';
+    let guess = '';
+    function playGame(guess){
+      let randomNumber = Math.random();
+      if(randomNumber < 0.5){
+        result = 'Heads';
+      } else{
+        result = 'Tails';
+      }
+      
+      if(guess === result){
+        console.log('YOU WIN!');
+        score.wins += 1;
+        console.log(score);
+      } else{
+        console.log('YOU LOSE!');
+        score.losses += 1;
+        console.log(score);
+      };
+    }
+
+  const score = {
+    wins: 0,
+    losses: 0
+  };
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8k</title>
+</head>
+<body>
+  <button onclick="{
+    playGame('Heads'); 
+  }
+  ">
+    heads
+  </button>
+  <button onclick="{
+    playGame('Tails'); 
+  }
+  ">
+    tails
+  </button>
+  <script>
+    let result = '';
+    let guess = '';
+    
+    const score = JSON.parse(localStorage.getItem('score')) || {
+      wins: 0,
+      losses: 0
+    };
+      
+    function playGame(guess){
+      let randomNumber = Math.random();
+      if(randomNumber < 0.5){
+        result = 'Heads';
+      } else{
+        result = 'Tails';
+      }
+      
+      if(guess === result){
+        console.log('YOU WIN!');
+        score.wins += 1;
+      } else{
+        console.log('YOU LOSE!');
+        score.losses += 1;
+      };
+      console.log(score); 
+
+      localStorage.setItem('score', JSON.stringify(score));
+    } 
+  </script>
+</body>
+</html>
