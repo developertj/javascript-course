@@ -14,16 +14,46 @@
   "class="js-subscribe-button">
     Subscribe
   </button>
+
+  <!-- Amazon shipping calculator project -->
+  <p>Amazon Shipping Calculator</p>
+  
+  <input class="js-input" placeholder="Cost of order" onkeydown="handleOnKeyDown(event)">
+  <button class="js-calculate-button" onclick="calculate();">
+    Calculate
+  </button>
+  <p class="total-cost"></p>
+
   <script>
     function subscribe(){
       const buttonElement = document.querySelector('.js-subscribe-button');
-    
       if(buttonElement.innerText === 'Subscribe'){
         buttonElement.innerHTML = 'Subscribed';
       } else{
         buttonElement.innerHTML = 'Subscribe';
       }
     }
+
+    //Amazon shipping calculator project
+    //algo take input. if input is less than 40 then print input + 10. if input is greater than 40 then print input.
+    function handleOnKeyDown(event){
+      if(event.key === 'Enter'){
+        calculate();
+      }
+    }
+
+    function calculate(){
+      let inputElement = document.querySelector('.js-input');
+      let cost = inputElement.value;
+      if(cost < 40){
+        document.querySelector('.total-cost')
+          .innerHTML = `$${Number(cost) + 10}`;
+      } else{
+        document.querySelector('.total-cost')
+          .innerHTML = `$${cost}`;
+      }
+    }
+    
   </script>
 </body>
 </html>
