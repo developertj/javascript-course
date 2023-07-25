@@ -25,13 +25,13 @@
 
     function calculate(){
       let inputElement = document.querySelector('.js-input');
-      let cost = inputElement.value;
-      if(cost < 40){
+      let cost = inputElement.value * 100;
+      if(cost < 4000){
         document.querySelector('.total-cost')
-          .innerHTML = `$${Math.round(Number(cost) + 10, 2)}`;
+          .innerHTML = `$${(Number(cost) + 1000)/100}`;
       } else{
         document.querySelector('.total-cost')
-          .innerHTML = `$${cost}`;
+          .innerHTML = `$${cost/100}`;
       }
     }
 </script>
