@@ -1,0 +1,40 @@
+body{
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+button{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.title{
+  font-weight: bold;
+  font-size: 30px;
+}
+.reset-button{
+  font-size: 15px;
+  padding: 8px 15px;
+  cursor: pointer;
+  border: none;
+}
+.emoji-button{
+  background-color: rgb(25, 25, 25);
+  border-radius: 60px;
+  border-color: white;
+  border-style: solid;
+  border-width: 3px;
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+}
+.emoji{
+  height: 50px;
+}
+.js-resultElement{
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 50px;
+}
+.js-moves{
+  margin-bottom: 60px;
+}
