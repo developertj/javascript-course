@@ -1,0 +1,22 @@
+button{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.request-now-button{
+  background-color: black;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 120px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.schedule-for-later-button{
+  background-color: rgb(230, 230, 230);
+  border: none;
+  height: 40px;
+  width: 150px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
