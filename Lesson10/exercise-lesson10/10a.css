@@ -1,0 +1,9 @@
+.add-to-cart-button{
+  background-color: rgb(255, 216, 20);
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 30px;
+  width: 160px;
+  border-radius: 80px;
+  cursor: pointer;
+}
