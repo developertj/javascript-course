@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      body{
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .left-buttons{
+        background-color: rgb(48, 48, 48);
+        color: white;
+        border: none;
+        height: 60px;
+        width: 60px;
+        border-radius: 30px;
+        font-size: 28px;
+        margin-left: 5px;
+      }
+      .right-buttons{
+        background-color: rgb(254, 160, 10);
+        color: white;
+        border: none;
+        height: 60px;
+        width: 60px;
+        border-radius: 30px;
+        font-size: 28px;
+        margin-left: 3px;
+      }
+      .clear-button{
+        background-color: rgb(48, 48, 48);
+        color: white;
+        border: none;
+        height: 60px;
+        width: 60px;
+        border-radius: 30px;
+        font-size: 17px;
+        margin-left: 3px;
+      }
+
+      .js-result{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 3px;
+        font-size: 45px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="js-result"></p>
+
+    <p>
+      <button class="left-buttons" onclick="updateCalculation(1)";>
+        1
+      </button>
+      <button class="left-buttons" onclick="updateCalculation(2)";>
+        2
+      </button>
+      <button class="left-buttons" onclick="updateCalculation(3)";>
+        3
+      </button>
+      <button class="right-buttons" onclick="updateCalculation(' + ')";>
+        +
+      </button>
+    </p>
+
+    <p>
+      <button class="left-buttons" onclick="updateCalculation(4)";>
+        4
+      </button>
+      <button class="left-buttons" onclick="updateCalculation(5)";>
+        5
+      </button>
+      <button class="left-buttons" onclick="updateCalculation(6)";>
+        6
+      </button>
+      <button class="right-buttons" onclick="updateCalculation(' - ')";>
+        -
+      </button>
+    </p>
+
+    <p>
+      <button class="left-buttons" onclick="updateCalculation(7)";>
+        7
+      </button>
+      <button class="left-buttons" onclick="updateCalculation(8)";>
+        8
+      </button>
+      <button class="left-buttons" onclick="updateCalculation(9)";>
+        9
+      </button>
+      <button class="right-buttons" onclick="updateCalculation(' * ')";>
+        *
+      </button>
+    </p>
+    
+    <p>
+      <button class="left-buttons" onclick="updateCalculation(0)";>
+        0
+      </button>
+      <button class="left-buttons" onclick="updateCalculation('.')";>
+        .
+      </button>
+      <button class="left-buttons" onclick = "eval(calculation), calculation = eval(calculation), result.innerHTML = calculation;">
+        =
+      </button>
+      <button class="right-buttons" onclick="updateCalculation(' / ')";>
+        /
+      </button>
+    </p>
+
+    <p>
+      <button class="clear-button" class="left-buttons" onclick="calculation = '',localStorage.removeItem('calc'), result.innerHTML='';">
+        Clear
+      </button>
+    </p>
+    
+    <script>
+      let calculation = localStorage.getItem('calc') || '';
+      
+      let result = document.querySelector('.js-result');
+
+      displayCalculation();
+
+      function updateCalculation(num){
+        localStorage.setItem('calc', calculation += num) ;
+        result.innerHTML = calculation;
+      }
+
+      function displayCalculation(){
+        result.innerHTML = calculation;
+      }
+    </script>
+  </body>
+</html>
