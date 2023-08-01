@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Projects</title>
+  <link rel="stylesheet" href="styles/10h.css">
+</head>
+<body>
+  <p>
+    YouTube Subscribe Button
+  </p>
+  <button onclick="
+    subscribe();
+  "class="js-subscribe-button">
+    Subscribe
+  </button>
+
+  <!-- Amazon shipping calculator project -->
+  <p>Amazon Shipping Calculator</p>
+  
+  <input class="js-input" placeholder="Cost of order" onkeydown="handleOnKeyDown(event)">
+  <button class="js-calculate-button" onclick="calculate();">
+    Calculate
+  </button>
+  <p class="total-cost"></p>
+
+  <script src="scripts/10h.js"></script>
+</body>
+</html>
