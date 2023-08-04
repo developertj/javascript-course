@@ -6,6 +6,7 @@
   <title>Array & Loops</title>
 </head>
 <body>
+  <p class="print"></p>
   <script>
     const myArray = [10, 20 , 30];
     console.log(myArray);
@@ -26,6 +27,37 @@
     //method to del
     myArray.splice(0, 1);
     console.log(myArray);
+
+    //starting arrays
+    //while loop
+    let i = 1;
+    while(i<=5){
+      console.log(i);
+      i++;
+    }
+    
+   //for loop
+    for(let i = 1; i<= 5; i++){
+      console.log(i);
+    }
+
+    let randomNumber = 0;
+    while(randomNumber < 0.5){
+      randomNumber = Math.random();
+    }
+    console.log(randomNumber);
+
+    const array = [
+    'run',
+    'go to gym',
+    'have a party'
+    ]
+
+    for(let index = 0; index < array.length; index++){
+      document.querySelector('.print')
+        .innerHTML = array[index];
+      console.log(array[index]);
+    }
   </script>
 </body>
 </html>
