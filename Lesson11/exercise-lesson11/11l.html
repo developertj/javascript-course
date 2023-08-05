@@ -11,17 +11,19 @@
     minMax([-2,3,-5,7,10]);
 
     function minMax(array){
-      let min = 0;
-      let max = 0;
+      let minMax = {
+        min: 0,
+        max: 0
+      };
       for(let i = 0; i < array.length; i++){
-        if(array[i] < min){
-          min = array[i];
+        if(array[i] < minMax.min){
+          minMax.min = array[i];
         }
-        if(array[i] > max){
-          max = array[i];
+        if(array[i] > minMax.max){
+          minMax.max = array[i];
         }
       }
-      console.log(`min: ${min}, max: ${max}`);
+      console.log(minMax);
     }
   </script>
 </body>
