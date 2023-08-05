@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11m</title>
+</head>
+<body>
+  <script>
+    minMax([]);
+    minMax([3]);
+    minMax([5]);
+    (minMax([1, -3, 5]));
+    (minMax([-2, 3, -5, 7, 10]));
+
+    function minMax(array){
+      let minMax = {
+        min: null,
+        max: null
+      };
+      for(let i = 0; i < array.length; i++){
+        if(array[i] < minMax.min || minMax.min === null){
+          minMax.min = array[i];
+        }
+        if(array[i] > minMax.max || minMax.max === null){
+          minMax.max = array[i];
+        }
+      }
+      console.log(minMax);
+    }
+  </script>
+</body>
+</html>
