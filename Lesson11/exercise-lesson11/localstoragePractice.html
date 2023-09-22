@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice</title>
+</head>
+<body>
+  <input class="name" placeholder="name" type="text">
+  <input class="age" placeholder="age" type="text">
+  <button class="submitButton" onclick="print()">Submit</button>
+  <p class="print"></p>
+  <script>
+    function print(){
+      let details = JSON.parse(localStorage.getItem("key")) || [];
+      
+      const nameValue = document.querySelector('.name').value;
+      const ageValue = document.querySelector('.age').value;
+      details.push(`name: ${nameValue}, age: ${ageValue}`);
+      localStorage.setItem("key", JSON.stringify(details));
+      console.log(JSON.parse(localStorage.getItem("key")));
+    }
+
+    
+    // details.name = ("Enter your name");
+    // details.age = ("Enter your age");
+    // localStorage.setItem("key", JSON.stringify(details));
+    // console.log( JSON.parse(localStorage.getItem("key")));
+
+
+    // function print(){
+    //   let array = JSON.parse(localStorage.getItem("key"));
+    //   const value = document.querySelector('.text-bar').value;
+    //   array.push(value);
+    //   localStorage.setItem("key", JSON.stringify(array));
+    //   console.log(JSON.parse(localStorage.getItem("key")));
+    // }
+  </script>
+</body>
+</html>

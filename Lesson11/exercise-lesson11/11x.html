@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11x</title>
+  <link rel="stylesheet" href="styles/11x.css">
+</head>
+<body>
+  <div class="whole-div">
+    <div>
+      <p>Todo List</p>
+    </div>
+    <div class="todo-input-grid">
+        <input placeholder="Todo name" type="text" class="input-todo">
+        <input type="date" class="js-dueDate input-date">
+        <button class="add-button" onclick="pushTodo()">
+          Add
+        </button>
+    </div>
+    <div class="js-todo-list todo-grid"></div>
+  </div>
+  <script src="scripts/11x.js"></script>
+</body>
+</html>
