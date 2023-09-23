@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced functions</title>
+</head>
+<body>
+  <script>
+    
+    // //  functions can be stored in variables(**functions are values**)
+    // function greeting() {
+    //   console.log("hello");
+    // }
+    // greeting();
+
+    // //normal variable function-->
+    // // const function1 = function greeting1(){
+    // //   console.log("hello1");
+    // // }
+    // // function1();
+
+    // //anonymous function
+    // const function1 = function(){
+    //   console.log("hello1");
+    // }
+    // function1();
+
+    // //method = a function saved inside an objects
+    // const object1 = {
+    //   name: "Tejas",
+    //   fun: function(){
+    //     console.log("This function is a method");
+    //   }
+    // }
+    // object1.fun();
+
+    // //function inside a function
+    // //like below
+    // function display(para) {
+    //   console.log(para);
+    // }
+    // display(2);
+
+    // function innerFunction(para) {
+    //   para();
+    // }
+    // innerFunction(function para(){
+    //   console.log("This is a function inside a function");
+    // })
+    
+    //runs after given time
+    setTimeout(function(){
+      console.log("This is a timeout function")
+    }, 3000);
+    console.log("Asynchronous text");
+
+    //repeats after interval
+    setInterval(function(){
+      console.log("This is a interval function")
+    }, 3000);
+    console.log("Asynchronous text 2");
+
+    let interval = false;
+    console.log(!interval);
+  </script>
+</body>
+</html>
