@@ -50,19 +50,31 @@
     // })
     
     //runs after given time
-    setTimeout(function(){
-      console.log("This is a timeout function")
-    }, 3000);
-    console.log("Asynchronous text");
+    // setTimeout(function(){
+    //   console.log("This is a timeout function")
+    // }, 3000);
+    // console.log("Asynchronous text");
 
-    //repeats after interval
-    setInterval(function(){
-      console.log("This is a interval function")
-    }, 3000);
-    console.log("Asynchronous text 2");
+    // //repeats after interval
+    // setInterval(function(){
+    //   console.log("This is a interval function")
+    // }, 3000);
+    // console.log("Asynchronous text 2");
 
-    let interval = false;
-    console.log(!interval);
+    // let interval = false;
+    // console.log(!interval);
+
+    //forEach loop
+    const array = ['Go to gym', 'Take creatine', 'Play cs'];
+    array.forEach(function(value,index){
+      //to continue
+      //break cant be used in forEach
+      if(index === 1) {
+        return;
+      }
+      console.log(index);
+      console.log(value);
+    })
   </script>
 </body>
 </html>
