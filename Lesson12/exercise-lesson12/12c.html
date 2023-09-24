@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12c</title>
+</head>
+<body>
+  <button class="start-button" onclick="finished()">
+    Start
+  </button>
+  <script>
+    const finished = function(){
+      setTimeout(function(){
+        document.querySelector('.start-button')
+        .innerHTML = "Finished!";
+      }, 1000)
+    }
+  </script>
+</body>
+</html>
