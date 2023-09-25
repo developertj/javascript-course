@@ -14,26 +14,59 @@
   </button>
   <script>
     let messages = 2;
+    let isIntervalRunning = false;
+    let timeInterval;
 
-    if(messages === 0 || messages < 0){
-      clearInterval(interval);
+    startInterval();
+
+    function startInterval(){
+      if(isIntervalRunning === true) {
+      return;
+    }
+    isIntervalRunning = true;
+
+    timeInterval = setInterval(function(){
+      if(document.title === "App"){
+        document.title =`(${messages})  New messages`;
+      } else {
+        document.title = "App";
+      }
+    }, 1000)
+    }
+    
+    function stopInterval(){
+      isIntervalRunning = false;
+      clearInterval(timeInterval);
       document.title = "App";
-    } else{
-        const interval = setInterval(function(){
-        if(document.title === "App"){
-          document.title =`(${messages})  New messages`;
-        } else {
-          document.title = "App"
-        }
-      }, 1000)
     }
 
     function add(){
-      messages++;
+      if(messages >= 0){
+        messages++;
+      }
+      startInterval();
     }
+
     function remove(){
-      messages--;
+      if(messages > 0){
+        messages--;
+      } 
+      if(messages === 0){
+        stopInterval();
+      }
     }
+    
+
+  //   function isMessage0(){
+  //     if(messages === 0) {
+  //       clearInterval(timeInterval);
+  //       document.title = "App";
+  //     } else {
+  //       if(document.title === "App"){
+  //         document.title =`(${messages})  New messages`;
+  //     }
+  //   }
+  // }
   </script>
 </body>
 </html>
