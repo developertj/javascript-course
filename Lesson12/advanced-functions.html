@@ -6,7 +6,11 @@
   <title>Advanced functions</title>
 </head>
 <body>
+  <button>
+    Click
+  </button>
   <script>
+    
     
     // //  functions can be stored in variables(**functions are values**)
     // function greeting() {
@@ -65,16 +69,56 @@
     // console.log(!interval);
 
     //forEach loop
-    const array = ['Go to gym', 'Take creatine', 'Play cs'];
-    array.forEach(function(value,index){
-      //to continue
-      //break cant be used in forEach
-      if(index === 1) {
-        return;
-      }
-      console.log(index);
-      console.log(value);
-    })
+    // const array = ['Go to gym', 'Take creatine', 'Play cs'];
+    // array.forEach((value,index) => {
+    //   //to continue
+    //   //break cant be used in forEach
+    //   if(index === 1) {
+    //     return;
+    //   }
+    //   console.log(index);
+    //   console.log(value);
+    // })
+
+    // //arrow functions
+    // const arrowFunction = () => {
+    //   console.log("hello");
+    // }
+    // arrowFunction();
+    // //normal functions
+    // const normalFunction = function (){
+    //   console.log("hello");
+    // }
+    // normalFunction();
+
+    // //passing parameters
+    // const arrowFunction2 = (param, param2) => {
+    //   console.log(param + param2);
+    // }
+    // arrowFunction2(5,2);
+
+    // //when one parameter
+    // const oneParameter = param => {
+    //   console.log(param + 1);
+    // }
+    // oneParameter(5); 
+
+    // //when one line 
+    // // const oneLine = () => {
+    // //   return 2+3;
+    // // }
+    // const oneLine = () =>  2+3;
+    // console.log(oneLine());
+    
+    // //arrow function inside an object
+    // const object = {
+    //   method: () =>{
+
+    //   },
+    //   method1() {
+
+    //   }
+    // }
   </script>
 </body>
 </html>
