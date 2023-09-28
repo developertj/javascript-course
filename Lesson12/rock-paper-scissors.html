@@ -8,26 +8,18 @@
 </head>
 <body>
   <p class="title">Rock Paper Scissors</p>
-  <button class="emoji-button" onclick="{
-    playGame('Rock'); 
-  }"><img class="emoji" src="images/Rock-emoji.png" alt="Rock"></button>
-  <button class="emoji-button" onclick="{
-    playGame('Paper');
-  }"><img class="emoji" src="images/Paper-emoji.png" alt="Paper"></button>
-  <button class="emoji-button" onclick="{
-    playGame('Scissors');
-  }"><img class="emoji" src="images/Scissors-emoji.png" alt="Scissors"></button>
+  <button class="emoji-button js-rock-button"><img class="emoji" src="images/Rock-emoji.png" alt="Rock"></button>
+  <button class="emoji-button js-paper-button"><img class="emoji" src="images/Paper-emoji.png" alt="Paper"></button>
+  <button class="emoji-button js-scissors-button"><img class="emoji" src="images/Scissors-emoji.png" alt="Scissors"></button>
   
   <p class="js-resultElement"></p>
   <p class="js-moves"></p>
   <p class="js-score"></p>
  
-  <button class="reset-button" onclick="{
-    resetScore();
-    localStorage.removeItem('score');
-  }">Reset score</button>
+  <button class="reset-button js-reset-button">
+    Reset score</button>
 
-  <button class="auto-play-button" onclick="autoPlay()">
+  <button class="auto-play-button js-auto-play-button">
     Autoplay</button>
 
   <script src="scripts/rock-paper-scissors.js"></script>

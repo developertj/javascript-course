@@ -6,12 +6,28 @@
   <title>Advanced functions</title>
 </head>
 <body>
-  <button>
+  <button class="click-button">
     Click
   </button>
   <script>
-    
-    
+    // //using event listener
+    // const clicked = ()=>{
+    //   console.log("Clicked");
+    // }
+
+    // const buttonElement = document.querySelector('.click-button')
+    // buttonElement.addEventListener('click', clicked)
+
+    // buttonElement.removeEventListener('click', ()=>{
+    //   console.log("Clicked");
+    // })
+
+    // buttonElement.addEventListener('click', ()=>{
+    //   console.log("Clicked2");
+    // })
+
+
+
     // //  functions can be stored in variables(**functions are values**)
     // function greeting() {
     //   console.log("hello");
@@ -119,6 +135,19 @@
 
     //   }
     // }
+
+    //filter
+      //used to remove negative values in an array
+    console.log([1, -3, 5].filter((value, index) => {
+      return value >= 0;
+    }));
+
+    //map transform array into other array
+    console.log([1,1,3].map((value, index) => {
+      return 2 * value;
+    }));
+
+    console.log([1,1,3].map(value => 2* value));
   </script>
 </body>
 </html>
